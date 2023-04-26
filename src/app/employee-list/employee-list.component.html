@@ -1,0 +1,22 @@
+<h2>Empoyee List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Name </th>
+            <th> Employement Type</th>
+            <th> Work</th>
+            <th>Vacation Taken</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of employees">
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.empType }}</td>
+            <td>{{ employee.empPrecent }}</td>
+            <td>
+                <button (click) = "workEmployee(employee.empId)" class="btn btn-info">Work</button>
+                <button (click) = "viewEmployee(employee.empId)" class="btn btn-info" style="margin-left: 10px">Taken Vacation</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
